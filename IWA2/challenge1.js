@@ -6,7 +6,7 @@ const user = 'John'
 /* This is the lastname of the user */ 
 
 const surname = 'Smith'
-cons
+
 
 
 console.log(user,surname)

@@ -1,2 +1,3 @@
-const value = "3"
-console.log(3 + 4 + 3)
+const value = 3
+console.log(value + 4 + value)
+
