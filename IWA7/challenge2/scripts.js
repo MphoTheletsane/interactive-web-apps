@@ -1,5 +1,5 @@
-const nickname = "Timmy";
-const firstname = "Timothy";
+const nickname = null;
+const firstname = null;
 
 if (nickname) {
   console.log(`Good Morning, ${nickname}!`);
