@@ -57,9 +57,10 @@ console.log(holidays.futureId || `ID ${futureId} not created yet`)
 
 let copied = {christmas}
 copied.name = 'X-mas'
-let correctDate = new Date("2023-12-25")
-correctDate.setHours(0)
-correctDate.setMinutes(0)
+let date = new Date("2023-12-25")
+const formattedDate = date.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' });
+formattedDate.setHours(0)
+formattedDate.setMinutes(0)
 
 let isEarlier = correctDate< holidays[6].date
 console.log('New date is earlier:', isEarlier)
@@ -67,7 +68,7 @@ console.log('New date is earlier:', isEarlier)
 if (isEarlier) holidays[6].date = correctDate
 console.log('ID change:', holidays[christmas].id != copied.id === copied.id)
 console.log('Name change:', copied.name)
-console.log('Date change:', holidays[christmas].date != correctDate || correctDate)
+console.log('Date change:', formattedDate)
 
 
 

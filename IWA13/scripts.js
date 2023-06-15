@@ -1,6 +1,6 @@
-let status = 'idle';
+let state = 'idle';
 let user = null;
-let calculated = 1;
+let calculated = '1';
 
 // Only allowed to change below
 
@@ -12,13 +12,17 @@ const logCalc = () => {
 
 const calcUser = () => {
   logCalc();
-  if (calculated > 2) user = 'John';
-  if (calculated > 2) status = 'requesting';
-  if (calculated > 3) status = 'idle';
+  if (calculated > 2 && user === null) {
+    user = 'John';
+    state = 'requesting';
+  }
+  if (calculated > 3) {
+    state = 'idle';
+  }
 };
 
 const checkUser = () => {
-  if (user && status === 'requesting') {
+  if (user && state === 'requesting') {
     console.log(`User: ${user} (${calculated})`);
   }
 };
@@ -39,3 +43,4 @@ calcUser();
 
 checkUser();
 calcUser();
+

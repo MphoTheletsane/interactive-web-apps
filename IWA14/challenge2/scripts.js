@@ -10,7 +10,7 @@ function internal() {
   const added = this.add(this.internal.a, this.internal.b);
   const multiplied = this.multiply(added, this.internal.c);
   console.log(multiplied);
-  return this;
+  
 }
 
 // Not allowed to change below this
